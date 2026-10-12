@@ -23,6 +23,8 @@ coordination.
 - **HS/CN hierarchy:** Comtrade queried at HS2-chapter level directly; Eurostat queried at
   CN8 (8-digit) product level and aggregated to HS2 by taking the first 2 digits, to make the
   two sources comparable at the same granularity.
+- **Comext aggregate codes:** the Comext product dimension mixes 8-digit CN8 codes with 2-, 4- and 6-digit roll-up aggregates;
+  summing all rows inflated totals roughly fourfold, so only 8-character codes were kept before aggregating to HS2.
 - **Currency:** Comtrade reports in USD; Eurostat/Comext reports in EUR. Eurostat figures are
   converted to USD at a fixed rate of 1.0824 USD/EUR (2024 annual average) wherever the two sources are
   compared directly. Source: [ECB Data Portal, annual USD/EUR reference rate](https://data.ecb.europa.eu/data/datasets/EXR/EXR.A.USD.EUR.SP00.A).
